@@ -1,0 +1,169 @@
+*{box-sizing:border-box;}
+
+body{margin:0;text-align:center;color:orange;background-color:black;}
+/*hyperlinks*/
+a:link     {color:orange;text-decoration:none;font:arial;}
+a:hover    {text-decoration:underline;color:orange;} 
+/*Style the header*/
+.header{background-color:black;padding:10px;text-align:center;color:orange;}
+h1{font-size:70px;}
+h2{font-size:50px;}
+h3{font-size:30px;}
+/*Style top navigation bar*/
+.topnav{overflow:hidden;background-color:orange;color:black;}
+/*style links*/
+.topnav a{float:left;display:block;color:black;text-align:center;padding:20px 100px;text-decoration:none;}
+/*change color on hover*/
+.topnav a:hover{background-color: black;color:orange;}
+/* 3 unequal columns floating next to each other */
+.column{float:center;padding:50px;}
+*left and right column*/
+.column.side{width:40%;}
+/*middle column*/
+.column.middle{background-color:orange;color:black;width:80%;}
+/* Clear floats after the columns*/
+.row:after{content:"";display:table;clear:both;}
+/*Responsive layout-makes the three columns stack on top of each other instead of next to each other*/
+@media screen and (max-width:600px){.column.side, .column.middle{width:100%;}}
+
+/*Style the footer*/
+.footer{background-color:orange;text-align:center;color:black;padding:10px;}
+
+/*Add product card*/
+.card{box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);max-width:170px;margin:auto;text-align:center;}
+.price{color:orange;font-size:22px;}
+.card button{border:none;outline:0;padding:12px;color:black;background-color:orange;text-align:center;cursor:pointer;width:150px;font-size:18px;}
+.card button:hover{opacity:0.7;}
+/*float pics next to each other*/
+.grid-container{display:grid;grid-template-columns:0.5fr 1fr;grid-gap:20px;}
+.mySlides{display:none}
+/*slideshow container*/
+.slideshow-container{max-width:1000px;position:relative;margin:auto}
+/*next&previous buttons*/
+.prev,.next{cursor:pointer;
+position:absolute;
+top:50%;width:absolute;padding:16px;margin-top:-22px;color:white;font-weight:bold;font-size:18px;transition:0.3s ease;border-radius:0 3px 3px 0;user-select:none;}
+/*position "next button" to the right*/
+.next{right:200;border-radius:3px 0 0 3px;}
+.prev{left:200;}
+.prev:hover,.next:hover{background-color: rgba(0,0,0,0.8);}
+/* Caption text */
+.text {
+  color: orange;
+ background-color:black;
+  font-size: 20px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: white;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top:-30;left:450;
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color:white;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: black;
+  color: orange;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}

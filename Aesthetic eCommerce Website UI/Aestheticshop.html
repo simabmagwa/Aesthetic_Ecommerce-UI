@@ -1,0 +1,154 @@
+<html>
+
+<head>
+<title>Aesthetic-Shop|Home</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" type="text/css" href="style/content.css"/>
+	
+<style></style>
+</head>
+
+<body>
+<div class="header">
+<img src ="images/jump.jpg" alt= "jump" width="15%" />
+<h1>Aesthetic</h1>
+<h3>Wear Art</h3>
+</div>
+
+<div class="topnav">
+<a href="#">New In</a>
+<a href="#">Sale</a>
+<a href="#">Shop</a>
+<a href="#">Contact Us</a>
+<a href="#">Sign In</a>
+</div>
+
+<div class="row">
+<div class="column side">
+<br/>
+<br/>
+<img src="images/pantyhosebw.jpg" alt="suit2"/><img src="images/pantyhose.jpg" alt="pantyhose"/><img src="images/pantyhosebw.jpg" alt="suit1"/>
+<h2>Shop Now</h2>
+
+<p>Shop our Aesthetically pleasing, quality pieces.<br/></p>
+</div>
+
+<div class="column middle">
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="images/pearl3.jpg" alt="pearlcroptop" style="width:30%"/>
+  <div class="text">Diamonds and Pearls</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="images/pearl2.png" alt="Pearl" style="width:30%"/>
+  <div class="text">the diamonds of the sea</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="images/pearl1.jpg" alt="pearlcroptop" style="width:30%"/>
+  <div class="text"><a href="#pearl">Own it</div></a>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+
+<h2>New In</h2>
+<p>"Never Underestimate The Power Of A Good Outfit On A Bad Day"
+</p>
+</div>
+
+<div class="column side">
+<div class="grid-container">
+<div class="card"><img src="images/sunglass.jpg" alt="sunglass" style="width:100%"/>
+<h3> Cheetah Sunglass</h3><p class="price">R179,99</p><p><button>Add to Cart</button></p></div>
+<div class="card"><img src="images/Hat.jpg" alt="hat" style="width:120%"/>
+<h3> Summer Hat</h3><p class="price">R259,99</p><p><button>Add to Cart</button></p></div>
+<div class="card"><img src="images/satinskirt1.jpg" alt="skirt" style="width:100%"/>
+<h3> Satin Skirt</h3><p class="price">R653,99</p><p><button>Add to Cart</button></p></div>
+<div class="card"><img id="pearl" src="images/pearl3.jpg" alt="pearl crop top" style="width:100%"/></a>
+<h3> Pearl Crop Top</h3><p class="price">R379,79</p><p><button>Add to Cart</button></p></div>
+</div>
+<h3>See more items...</h3>
+</div>
+</div>
+
+<div class="footer">
+<button class="open-button" onclick="openForm()">Sign In</button>
+
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Login</h1>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+    <button type="submit" class="btn">Login</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<p>Sign up for newsletter</p>
+<p>2021 Aesthetic All rights reserved<br/>
+Privacy Policy | Terms&Conditions
+</div>
+
+</body>
+
+</html>
